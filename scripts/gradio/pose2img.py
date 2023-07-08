@@ -1,3 +1,6 @@
+import pyrootutils
+pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
+
 import torch
 from pytorch_lightning import seed_everything
 
@@ -537,7 +540,7 @@ if __name__=="__main__":
     parser.add_argument(
         "--mmpose_checkpoint",
         type=str,
-        default="humansd_data/checkpoints/higherhrnet_w48_coco_512x512_udp.pth",
+        default="humansd_data/checkpoints/higherhrnet_w48_humanart_512x512_udp.pth",
         help="the checkpoint of human pose estimator",
     )
     
